@@ -1,0 +1,57 @@
+Ruote on Rails
+==============
+
+A simple example Rails app for demonstrating the usage of
+[Ruote](http://ruote.rubyforge.org) in [Rails](http://rubyonrails.org) using
+[RuoteKit](http://github.com/kennethkalmer/ruote-kit).
+
+
+Installation
+------------
+
+*   clone (or do whatever you like to get the code) this repo:
+        $ git clone git://github.com/tosch/ruote-on-rails.git  
+        $ cd ruote-on-rails
+*   install RuoteKit (for now, using tosch's fork)
+        $ git submodule add git://github.com/tosch/ruote-kit.git vendor/plugins/ruote-kit  
+        $ git submodule init
+*   make sure RuoteKit's dependencies are met (you'll need to have
+    [bundler](http://github.com/carlhuda/bundler) 0.9.x installed)
+        $ cd vendor/plugins/ruote-kit  
+        $ bundle install
+        $ cd ../../..
+
+
+Configuration
+-------------
+
+Just tailor config/initializers/ruote_kit.rb to your needs.
+
+
+Run
+---
+
+In one terminal, start the Rails server itself:
+    $ script/server
+In another terminal, start the RuoteKit worker process:
+    $ rake ruote_kit:run_worker
+
+Browse to http://localhost:3000/_ruote and you'll see there are no running
+processes. You could change that using the "Launch process" link ;-)
+
+
+Using Ruote from within Rails
+-----------------------------
+
+You can access Ruote's engine anywhere in your Rails code by calling
+    RuoteKit.engine
+So launching a workflow process is as easy as
+    RuoteKit.engine.launch your_process_definition
+The storage participant (used by the catchall participant) is available at
+    RuoteKit.storage_participant
+
+
+Examples
+--------
+
+This is a TODO
