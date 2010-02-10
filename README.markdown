@@ -18,12 +18,12 @@ Installation
         $ cd tmp/ruote-kit
         $ rake build       # jeweler gem has to be installed for that
         $ gem install pkg/*.gem
-*   make sure RuoteKit's dependencies are met (you'll need to have
+        $ cd ../..
+*   you may remove the ruote-kit dir now
+        $ rm -r tmp/ruote-kit
+*   make sure all dependencies are met (you'll need to have
     [bundler](http://github.com/carlhuda/bundler) 0.9.x installed)
         $ bundle install
-*   clean up a bit
-        $ cd ../..
-        $ rm -r tmp/ruote-kit
 
 
 Configuration
