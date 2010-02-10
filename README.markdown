@@ -1,7 +1,7 @@
 Ruote on Rails
 ==============
 
-A simple example Rails app for demonstrating the usage of
+A simple example Rails 3 app for demonstrating the usage of
 [Ruote](http://ruote.rubyforge.org) in [Rails](http://rubyonrails.org) using
 [RuoteKit](http://github.com/kennethkalmer/ruote-kit).
 
@@ -12,14 +12,18 @@ Installation
 *   clone (or do whatever you like to get the code) this repo:
         $ git clone git://github.com/tosch/ruote-on-rails.git  
         $ cd ruote-on-rails
-*   install RuoteKit (for now, using tosch's fork)
-        $ git submodule add git://github.com/tosch/ruote-kit.git vendor/plugins/ruote-kit  
-        $ git submodule init
+*   install RuoteKit (for now, using tosch's fork -- you'll have to build the
+    gem by yourself, sorry, but an updated gem will be available soon)
+        $ git clone git://github.com/tosch/ruote-kit.git tmp/ruote-kit
+        $ cd tmp/ruote-kit
+        $ rake build       # jeweler gem has to be installed for that
+        $ gem install pkg/*.gem
 *   make sure RuoteKit's dependencies are met (you'll need to have
     [bundler](http://github.com/carlhuda/bundler) 0.9.x installed)
-        $ cd vendor/plugins/ruote-kit  
         $ bundle install
-        $ cd ../../..
+*   clean up a bit
+        $ cd ../..
+        $ rm -r tmp/ruote-kit
 
 
 Configuration
@@ -32,7 +36,7 @@ Run
 ---
 
 In one terminal, start the Rails server itself:
-    $ script/server
+    $ rails server
 In another terminal, start the RuoteKit worker process:
     $ rake ruote_kit:run_worker
 
