@@ -12,6 +12,8 @@ Installation
 *   clone (or do whatever you like to get the code) this repo:
         $ git clone git://github.com/tosch/ruote-on-rails.git  
         $ cd ruote-on-rails
+*   switch to rails3 branch
+        $ git checkout -t origin/rails3
 *   install RuoteKit (for now, using tosch's fork -- you'll have to build the
     gem by yourself, sorry, but an updated gem will be available soon)
         $ git clone git://github.com/tosch/ruote-kit.git tmp/ruote-kit
