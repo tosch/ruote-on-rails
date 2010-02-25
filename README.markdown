@@ -12,14 +12,8 @@ Installation
 *   clone (or do whatever you like to get the code) this repo:
         $ git clone git://github.com/tosch/ruote-on-rails.git  
         $ cd ruote-on-rails
-*   install RuoteKit (for now, using tosch's fork)
-        $ git submodule add git://github.com/tosch/ruote-kit.git vendor/plugins/ruote-kit  
-        $ git submodule init
-*   make sure RuoteKit's dependencies are met (you'll need to have
-    [bundler](http://github.com/carlhuda/bundler) 0.9.x installed)
-        $ cd vendor/plugins/ruote-kit  
-        $ bundle install
-        $ cd ../../..
+*   install gem dependency to ruote-kit
+        $ rake gems:install
 
 
 Configuration
