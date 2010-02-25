@@ -14,15 +14,6 @@ Installation
         $ cd ruote-on-rails
 *   switch to rails3 branch
         $ git checkout -t origin/rails3
-*   install RuoteKit (for now, using tosch's fork -- you'll have to build the
-    gem by yourself, sorry, but an updated gem will be available soon)
-        $ git clone git://github.com/tosch/ruote-kit.git tmp/ruote-kit
-        $ cd tmp/ruote-kit
-        $ rake build       # jeweler gem has to be installed for that
-        $ gem install pkg/*.gem
-        $ cd ../..
-*   you may remove the ruote-kit dir now
-        $ rm -r tmp/ruote-kit
 *   make sure all dependencies are met (you'll need to have
     [bundler](http://github.com/carlhuda/bundler) 0.9.x installed)
         $ bundle install
