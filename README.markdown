@@ -17,6 +17,8 @@ Installation
 *   make sure all dependencies are met (you'll need to have
     [bundler](http://github.com/carlhuda/bundler) 0.9.x installed)
         $ bundle install
+*   create temp dir
+        $ mkdir -p mkdir tmp/pids
 
 
 Configuration
