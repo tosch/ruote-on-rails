@@ -2,7 +2,7 @@
 source 'http://gemcutter.org'
 
 
-gem "rails", "3.0.0.beta4"
+gem "rails", "3.0.0.rc"
 
 ## Bundle edge rails:
 # gem "rails", :git => "git://github.com/rails/rails.git"
@@ -17,7 +17,10 @@ gem "sqlite3-ruby", :require => "sqlite3"
 # gem "sqlite3-ruby", :require => "sqlite3"
 # gem "aws-s3", :require => "aws/s3"
 
-gem "ruote-kit"
+# Include ruote-kit and ruote. Until v2.1.11 is released, we will reference the
+# git repos
+gem "ruote", :git => "git://github.com/jmettraux/ruote.git", :branch => 'ruote2.1'
+gem "ruote-kit", :git => "git://github.com/tosch/ruote-kit.git"
 
 ## Bundle gems used only in certain environments:
 # gem "rspec", :group => :test
