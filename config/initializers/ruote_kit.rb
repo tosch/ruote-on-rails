@@ -1,16 +1,20 @@
-RuoteKit.configure do |config|
-  # make changes if needed
-  #
-  # config.work_directory = 'my_special_work_dir' # defaults to File.join( Dir.pwd, "work_#{RuoteKit.env}" )
-  # config.workers = 2                            # defaults to 1
-  # config.run_worker = true                      # defaults to false
-  # config.mode = :transient                      # defaults to :file_system
+# make changes when needed
+#
+# you may use another persistent storage for example or include a worker so that
+# you don't have to run it in a separate instance
 
-  config.register do
+require 'ruote/storage/fs_storage'
+
+RUOTE_STORAGE = Ruote::FsStorage.new("ruote_work_#{Rails.env}")
+
+RuoteKit.engine = Ruote::Engine.new(RUOTE_STORAGE)
+
+unless $RAKE_TASK # don't register participants in rake tasks
+  RuoteKit.engine.register do
     # register your own participants using the participant method
     #
-    # Example:
-    # participant 'alice', Ruote::StorageParticipant
+    # Example: participant 'alice', Ruote::StorageParticipant see
+    # http://ruote.rubyforge.org/participants.html for more info
 
     # register the catchall storage participant named '.+'
     catchall

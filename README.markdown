@@ -2,8 +2,8 @@ Ruote on Rails
 ==============
 
 A simple example Rails 3 app for demonstrating the usage of
-[Ruote](http://ruote.rubyforge.org) in [Rails](http://rubyonrails.org) using
-[RuoteKit](http://github.com/kennethkalmer/ruote-kit).
+[ruote](http://ruote.rubyforge.org) in [Rails](http://rubyonrails.org) using
+[ruote-kit](http://github.com/kennethkalmer/ruote-kit).
 
 
 Installation
@@ -15,7 +15,7 @@ Installation
 *   switch to rails3 branch
         $ git checkout -t origin/rails3
 *   make sure all dependencies are met (you'll need to have
-    [bundler](http://github.com/carlhuda/bundler) 0.9.x installed)
+    [bundler](http://rubybundler.com) 0.9.x installed)
         $ bundle install
 *   create temp dir
         $ mkdir -p mkdir tmp/pids
@@ -33,7 +33,7 @@ Run
 In one terminal, start the Rails server itself:
     $ rails server
 In another terminal, start the RuoteKit worker process:
-    $ rake ruote_kit:run_worker
+    $ rake ruote:run_worker
 
 Browse to http://localhost:3000/_ruote and you'll see there are no running
 processes. You could change that using the "Launch process" link ;-)
