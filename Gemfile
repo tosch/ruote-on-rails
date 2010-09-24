@@ -19,7 +19,7 @@ gem 'sqlite3-ruby', :require => 'sqlite3'
 
 # gem 'ruote-kit'
 # use git repository as long as v2.1.11 is not released
-gem 'ruote', :git => 'git://github.com/jmettraux/ruote.git'
+gem 'ruote', :git => 'git://github.com/jmettraux/ruote.git', :branch => 'ruote2.1'
 gem 'ruote-kit', :git => 'git://github.com/tosch/ruote-kit.git'
 
 ## Bundle gems used only in certain environments:
