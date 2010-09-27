@@ -9,10 +9,23 @@ A simple example Rails app for demonstrating the usage of
 Installation
 ------------
 
+Sorry, it's a bit complicated unless you decide to use Bundler[http://gembundler.org]
+for gem handling. It'll get easier soon when ruote and ruote-kit v2.1.11 will be
+released.
+
+*   build the ruote gem from the sources and install it
+        $ git clone git://github.com/jmettraux/ruote.git && cd ruote
+        $ gem install jeweler
+        $ rake build && gem install pkg/ruote-2.1.11.gem && cd ..
+*   build the ruote-kit gem from the sources and install it
+        $ git clone git://github.com/kennethkalmer/ruote-kit.git && cd ruote-kit
+        $ gem install bundler
+        $ bundle install
+        $ rake build && gem install pkk/ruote-kit-2.1.11.gem && cd ..
 *   clone (or do whatever you like to get the code) this repo:
         $ git clone git://github.com/tosch/ruote-on-rails.git  
         $ cd ruote-on-rails
-*   install gem dependency to ruote-kit
+*   install any missing gems
         $ rake gems:install
 
 
