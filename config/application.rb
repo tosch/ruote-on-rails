@@ -39,7 +39,10 @@ module RuoteOnRails
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters += [:password]
 
-    # put RuoteKit into the Rack middleware stack
-    config.middleware.use 'RuoteKit::Application'
+    # we don't put RuoteKit into the Rack middleware stack as we would duplicate
+    # routing between Rails and RuoteKit (it's a Sinatra app). Instead, we use
+    # Rails' routes.rb to pass requests on /_ruote(.*) to RuoteKit.
+    #
+    # config.middleware.use 'RuoteKit::Application'
   end
 end
