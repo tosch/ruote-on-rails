@@ -15,7 +15,7 @@ Installation
 *   switch to rails3 branch
         $ git checkout -t origin/rails3
 *   make sure all dependencies are met (you'll need to have
-    [bundler](http://rubybundler.com) 0.9.x installed)
+    [bundler](http://rubybundler.com) installed)
         $ bundle install
 *   create temp dir
         $ mkdir -p mkdir tmp/pids
