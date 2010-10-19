@@ -9,6 +9,20 @@ A simple example Rails 3 app for demonstrating the usage of
 Installation
 ------------
 
+### Use The Rails Template ###
+
+*   install Rails
+        $ gem install rails
+*   create a new Rails app by running
+        $ rails new foo -m http://github.com/tosch/ruote-on-rails/raw/rails3/template.rb
+*   cd into the new Rails dir
+        $ cd foo
+*   make sure all dependencies are met (you'll need to have
+    [bundler](http://rubybundler.com) installed)
+        $ bundle install
+
+### Or Clone This Repository ###
+
 *   clone (or do whatever you like to get the code) this repo:
         $ git clone git://github.com/tosch/ruote-on-rails.git  
         $ cd ruote-on-rails
