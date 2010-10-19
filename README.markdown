@@ -67,4 +67,11 @@ The storage participant (used by the catchall participant) is available at
 Examples
 --------
 
-This is a TODO
+There are a few example apps based on Ruote On Rails:
+
+* [TheBoard](http://github.com/jmettraux/theboard) by
+  [John Mettraux](http://github.com/jmettraux) uses Rails 3 and is "a rails3
+  example application for ruote / ruote-kit / quaderno"
+* [ruote-rails-example](http://github.com/threetee/ruote-rails-example) by
+  [threetee](http://github.com/threetee) is a Rails 2 test app which integrates
+  ruote, ruote-amqp, ruote-kit and ruote-on-rails
