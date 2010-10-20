@@ -22,7 +22,7 @@ Rails::Initializer.run do |config|
 
 
   # use RuoteKit for easy Ruote integration
-  config.gem 'ruote-kit'
+  config.gem 'ruote-kit', :version => '~>2.1.11'
   config.middleware.use 'RuoteKit::Application'
 
   # Only load the plugins named here, in the order given (default is alphabetical).
