@@ -5,26 +5,17 @@ A simple example Rails app for demonstrating the usage of
 [ruote](http://ruote.rubyforge.org) in [Rails](http://rubyonrails.org) using
 [RuoteKit](http://github.com/kennethkalmer/ruote-kit).
 
+This is the (legagy) branch for Rails 2. There is a rails3 branch available.
+
 
 Installation
 ------------
 
-Sorry, it's a bit complicated unless you decide to use Bundler[http://gembundler.org]
-for gem handling. It'll get easier soon when ruote and ruote-kit v2.1.11 will be
-released.
-
-*   build the ruote gem from the sources and install it
-        $ git clone git://github.com/jmettraux/ruote.git && cd ruote
-        $ gem install jeweler
-        $ rake build && gem install pkg/ruote-2.1.11.gem && cd ..
-*   build the ruote-kit gem from the sources and install it
-        $ git clone git://github.com/kennethkalmer/ruote-kit.git && cd ruote-kit
-        $ gem install bundler
-        $ bundle install
-        $ rake build && gem install pkk/ruote-kit-2.1.11.gem && cd ..
 *   clone (or do whatever you like to get the code) this repo:
         $ git clone git://github.com/tosch/ruote-on-rails.git  
         $ cd ruote-on-rails
+*   checkout the rails2 branch
+        $ git checkout -t rails2
 *   install any missing gems
         $ rake gems:install
 
@@ -61,4 +52,9 @@ The storage participant (used by the catchall participant) is available at
 Examples
 --------
 
-This is a TODO
+* [ruote-rails-example](http://github.com/threetee/ruote-rails-example) by
+  [threetee](http://github.com/threetee) is a Rails 2 test app which integrates
+  ruote, ruote-amqp, ruote-kit and ruote-on-rails
+* the rails3 branch of route-on-rails includes the TheBoard example by
+  [John Mettraux](http://github.com/jmettraux), which is "a rails3 example
+  application for ruote / ruote-kit / quaderno"
