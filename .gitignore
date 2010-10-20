@@ -5,3 +5,4 @@ ruote_work_*
 db/*.sqlite3
 log/*.log
 tmp/**/*
+Gemfile.lock
