@@ -1,5 +1,69 @@
-# Sample localization file for English. Add more files in this directory for other locales.
 # See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  hello: "Hello world"
+
+  flash:
+    errors:
+      login_failed: login failed
+
+  form:
+    id: id
+    task_regex: task regex
+
+  process:
+    wfid: wfid
+    size: size
+    position: position
+
+  workitem:
+    id: id
+    participant_name: participant
+    task: task
+
+  layouts:
+    theboard:
+      logout: logout
+      workitems: workitems
+      processes: processes
+      forms: forms
+      ruote: ruote
+
+  sessions:
+    new:
+      login: login
+
+  forms:
+    index:
+      title: forms
+      new: new form
+      show: show
+    show:
+      title: form
+      template: template
+      form: form
+      data_in: data in
+      data_out: data out
+      render: render →
+      undo: undo
+      reset: reset
+      produce: produce ↓
+      submit: submit
+      cancel: cancel
+
+  processes:
+    index:
+      title: processes
+
+  workitems:
+    index:
+      title: workitems
+      show: show
+    show:
+      title: workitem
+      fields: fields
+      cancel: cancel
+      release: for everyone
+      take: for myself
+      save: save
+      proceed: proceed
+

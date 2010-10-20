@@ -1,0 +1,82 @@
+
+%h1
+  = t '.title'
+
+#flow
+  %canvas#fluo{ :width => 1150, :height => 700 }
+
+#form
+
+  - form_tag(workitem_path(@workitem), :method => 'PUT') do
+
+    = hidden_field_tag 'workitem[submit]', 'save'
+
+    - if @form
+
+      #quad.quad_root
+
+      = hidden_field_tag 'workitem[fields]', Rufus::Json.encode(@workitem.fields)
+
+    - else
+
+      %div #{t('.fields') + ':'}
+      = text_area_tag 'workitem[fields]', Rufus::Json.encode(@workitem.fields), :rows => 10, :cols => 77
+
+    .buttons
+
+      = link_to t('.cancel'), :action => :index
+
+      - if @workitem.participant_name != 'anyone'
+        = submit_tag t('.release'), :id => 'release_button'
+      - else
+        = submit_tag t('.take'), :id => 'take_button'
+
+      = submit_tag t('.save'), :id => 'save_button'
+      = submit_tag t('.proceed'), :id => 'proceed_button'
+
+
+:javascript
+
+  $('#release_button').bind('click', function() {
+    $('#workitem_submit').val('release');
+    return true;
+  });
+  $('#take_button').bind('click', function() {
+    $('#workitem_submit').val('take');
+    return true;
+  });
+  $('#proceed_button').bind('click', function() {
+    $('#workitem_submit').val('proceed');
+    return true;
+  });
+
+  //
+  // fluo
+
+  document.getElementById('fluo').noOuterBorder = true;
+  
+  Fluo.renderFlow(
+    'fluo', #{@tree}, { workitems: [ '#{@workitem.fei.expid}' ] });
+  
+  Fluo.crop('fluo');
+
+- if @form
+
+  :javascript
+
+    //
+    // quad
+
+    var data = JSON.parse($('#workitem_fields')[0].value);
+    var template = Quaderno.parse(#{@form.template.inspect});
+    Quaderno.render('#quad', template, data);
+
+    var produce = function() {
+      var product = JSON.stringify(Quaderno.produce('#quad'));
+      $('#workitem_fields').val(product);
+      return true;
+    };
+
+    $('#save_button').bind('click', produce);
+    $('#proceed_button').bind('click', produce);
+

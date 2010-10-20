@@ -1,0 +1,7 @@
+
+#flashes
+  - %w[ notice error ].each do |key|
+    - if f = flash()[key.intern]
+      %div{ :class => key }
+        = f
+

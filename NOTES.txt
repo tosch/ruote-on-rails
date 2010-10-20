@@ -1,0 +1,5 @@
+
+* done :
+
+- rails g rspec:install
+

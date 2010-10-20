@@ -3,6 +3,11 @@
 # you may use another persistent storage for example or include a worker so that
 # you don't have to run it in a separate instance
 
+# we will use yajl for json encoding/decoding
+# you may whish to use another one (json, json_pure) if yajl is not available
+require 'yajl'
+Rufus::Json.backend = :yajl
+
 require 'ruote/storage/fs_storage'
 
 RUOTE_STORAGE = Ruote::FsStorage.new("ruote_work_#{Rails.env}")
@@ -28,3 +33,7 @@ unless $RAKE_TASK # don't register participants in rake tasks
     catchall
   end
 end
+
+# when true, the engine will be very noisy (stdout)
+#
+RuoteKit.engine.context.logger.noisy = false

@@ -1,0 +1,6 @@
+
+= RuoteOnRails
+
+== 2010-10-20 ==
+
+* included TheBoard example by John Mettraux

@@ -1,0 +1,26 @@
+
+%h1
+  = t '.title'
+
+%table.list
+
+  %thead
+    %td
+      = t 'workitem.id'
+    %td
+      = t 'workitem.participant_name'
+    %td
+      = t 'workitem.task'
+    %td
+
+  - @workitems.each do |workitem|
+    %tr
+      %td
+        = workitem.fei.sid
+      %td
+        = workitem.participant_name
+      %td
+        = workitem.params['task']
+      %td
+        = link_to t('.show'), workitem_path(workitem)
+

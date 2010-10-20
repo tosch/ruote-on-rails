@@ -1,0 +1,26 @@
+
+%h1
+  = t '.title'
+
+%table.list
+
+  %thead
+    %td
+      = t 'form.id'
+    %td
+      = t 'form.task_regex'
+    %td
+
+  - @forms.each do |form|
+    %tr
+      %td
+        = form.id
+      %td
+        = form.task_regex
+      %td
+        = link_to t('.show'), form_path(form)
+
+.buttons
+  %a.button{ :href => new_form_path }
+    = t('.new')
+

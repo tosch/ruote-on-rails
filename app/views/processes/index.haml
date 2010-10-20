@@ -1,0 +1,25 @@
+
+%h1
+  = t '.title'
+
+%table.list
+
+  %thead
+    %td
+      = t 'process.wfid'
+    %td
+      = t 'process.size'
+    %td
+      = t 'process.position'
+
+  - @processes.each do |process|
+    %tr
+      %td
+        = process.wfid
+      %td
+        = process.expressions.size
+      %td
+        - process.position.each do |pos|
+          - fei, pname, info = pos
+          = "#{pname} #{info['task']}"
+

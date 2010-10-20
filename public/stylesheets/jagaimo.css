@@ -1,0 +1,50 @@
+
+.jagaimo {
+  color: #e7eef5;
+  /*background: rgba(0,0,0,.85);*/
+  background: black;
+  font: 10.5px/14px "Menlo regular", monaco, courier, mono;
+  padding: 12px;
+  margin: 1px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  /*overflow: auto;*/
+}
+
+.jagaimo_atom {
+  display: inline-block;
+}
+.jagaimo_key {
+  color: #86E34B;
+}
+.jagaimo_bracket {
+  margin-left: 3px;
+  margin-right: 3px;
+}
+.jagaimo_brace {
+  margin-left: 3px;
+  margin-right: 3px;
+}
+.jagaimo_colon {
+  margin-right: 3px;
+}
+.jagaimo_comma {
+  margin-right: 3px;
+}
+.jagaimo_boolean {
+  color: red;
+}
+
+.jagaimo_tree_line {
+  margin-left: 14px;
+}
+.jagaimo_tree_key {
+  color: #86E34B;
+}
+.jagaimo_tree_bullet {
+  color: red;
+}
+.jagaimo_tree_atom {
+  color: white;
+}

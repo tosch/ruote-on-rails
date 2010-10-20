@@ -1,0 +1,15 @@
+
+%h1
+  = t '.login'
+
+.session.group
+  = form_tag(sessions_path, :method => 'POST') do
+    = label_tag(:username, 'username') + ':'
+    = text_field_tag(:username)
+    = label_tag(:password, 'password') + ':'
+    = password_field_tag(:password)
+    = submit_tag('login')
+
+:javascript
+  document.getElementById('username').focus();
+

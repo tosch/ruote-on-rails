@@ -1,0 +1,121 @@
+
+/* general */
+
+body {
+  font: 14px/1.75em "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif;
+  background: #ffffff;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+}
+
+h1 {
+  font-size: 150%;
+  margin-bottom: 7px;
+}
+
+.right {
+  text-align: right;
+}
+
+/* header */
+
+.header {
+  width: 100%;
+  margin-bottom: 14px;
+  display: inline-block;
+  text-align: right;
+}
+
+.header a.home {
+  float: left;
+  margin-top: 7px;
+  font-size: 150%;
+}
+
+.header a.user {
+  display: inline-block;
+}
+
+.nav * {
+  display: inline-block;
+}
+
+/* buttons */
+
+.buttons {
+  white-space: nowrap;
+  padding: 12px 0 6px 0;
+}
+.buttons a, input[type=submit] {
+  vertical-align: baseline;
+  margin: 0 2px;
+  padding: 3px 9px 4px 9px;
+  background: #aaaeb0;
+  color: #fcfcfc;
+  font-size: 14px;
+  line-height: 1.25em;
+  font-weight: bold;
+  border: none;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  text-decoration: none;
+}
+.buttons a:hover, input[type=submit]:hover {
+  cursor: pointer;
+  text-shadow: #555555 0 1px 0;
+}
+.buttons a:active {
+  background: #9b9ea0;
+}
+
+/* tables */
+
+table.list {
+  width: 100%;
+  border: 1px solid black;
+}
+table.list > thead > td {
+  border-bottom: 1px solid black;
+}
+table.list td {
+  border: 1px dotted black;
+  padding: 3px;
+}
+
+/* forms/show.haml */
+
+table.form {
+  width: 100%;
+}
+table.form td {
+  padding: 3px;
+  vertical-align: top;
+}
+table.form textarea {
+  width: 100%;
+}
+
+/* workitems/show.haml */
+
+#flow {
+  float: right;
+}
+
+#form {
+  float: left;
+  margin-right: 14px;
+}
+
+/* footer */
+
+.footer {
+  clear: both;
+  margin-top: 21px;
+  width: 100%;
+  text-align: right;
+}
+

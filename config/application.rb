@@ -43,6 +43,8 @@ module RuoteOnRails
     # routing between Rails and RuoteKit (it's a Sinatra app). Instead, we use
     # Rails' routes.rb to pass requests on /_ruote(.*) to RuoteKit.
     #
+    # See config/routes.rb
+    #
     # config.middleware.use 'RuoteKit::Application'
   end
 end

@@ -1,0 +1,83 @@
+
+%h1
+  = t('.title')
+
+= form_for @form do |f|
+
+  %table.form
+
+    %tr
+      %td
+        = t('form.task_regex') + ':'
+        = f.text_field :task_regex
+      %td
+
+    %tr
+      %td
+        = t('.template') + ':'
+        %div
+          = f.text_area :template
+        .buttons.right
+          %a{ :href => '', :onclick => 'return render();' }
+            = t('.render')
+      %td
+        = t('.form') + ':'
+        #quad.quad_root
+        .buttons
+          %a{ :href => '', :onclick => 'return undo();' }
+            = t('.undo')
+          %a{ :href => '', :onclick => 'return reset();' }
+            = t('.reset')
+          %a{ :href => '', :onclick => 'return produce();' }
+            = t('.produce')
+
+    %tr
+      %td
+        = t('.data_in') + ':'
+        %div
+          = f.text_area :sample_data, :rows => 10
+        -# #data_in.jagaimo
+      %td
+        = t('.data_out') + ':'
+        #data_out.jagaimo
+
+  .buttons
+    = link_to t('.cancel'), :action => :index
+    = f.submit t('.submit')
+
+
+:javascript
+
+  //var data_in = JSON.parse('#{@form.sample_data}');
+  //Jagaimo.render('#data_in', data_in, { mode: 'tree' });
+
+  function render () {
+    try {
+      var data = JSON.parse($('#form_sample_data')[0].value);
+      var template = Quaderno.parse($('#form_template')[0].value);
+      Quaderno.render('#quad', template, data);
+    }
+    catch (e) {
+    }
+    return false;
+  }
+
+  render();
+
+  function undo () {
+    Quaderno.undo('#quad');
+    return false;
+  }
+  function reset () {
+    Quaderno.reset('#quad');
+    return false;
+  }
+
+  function produce () {
+
+    var product = Quaderno.produce('#quad');
+    Jagaimo.render('#data_out', product, { mode: 'tree' });
+
+    return false;
+  }
+
