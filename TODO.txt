@@ -1,3 +1,4 @@
 
 [ ] delegation (list of users ?)
+[ ] better documentation of the example models/controllers
 
