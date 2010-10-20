@@ -8,6 +8,14 @@ require 'ruote/storage/fs_storage'
 RUOTE_STORAGE = Ruote::FsStorage.new("ruote_work_#{Rails.env}")
 
 RuoteKit.engine = Ruote::Engine.new(RUOTE_STORAGE)
+# By default, there is no running worker when you start the Rails server
+# This is due to the fact that a the worker should be 'always on' and not all
+# deployments may guarantee that. To start a worker in its own process, call
+# rake ruote:run_worker
+# If you like to have a worker running as soon as you start Rails, replace the
+# line before this comment with the following line:
+#
+# RuoteKit.engine = Ruote::Engine.new(Ruote::Worker.new(RUOTE_STORAGE))
 
 unless $RAKE_TASK # don't register participants in rake tasks
   RuoteKit.engine.register do
