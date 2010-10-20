@@ -37,3 +37,5 @@ end
 # when true, the engine will be very noisy (stdout)
 #
 RuoteKit.engine.context.logger.noisy = false
+
+require Rails.root.join('app/models/workitem.rb')
