@@ -21,7 +21,7 @@ en:
     task: task
 
   layouts:
-    theboard:
+    application:
       logout: logout
       workitems: workitems
       processes: processes

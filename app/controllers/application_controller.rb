@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
 
   before_filter :login_required
 
-  layout 'theboard'
+  layout 'application'
 
   protected # if it makes any sense
 

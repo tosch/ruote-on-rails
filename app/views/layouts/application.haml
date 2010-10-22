@@ -5,7 +5,7 @@
 
     %meta( http-equiv="Content-Type" content="text/html; charset=UTF-8" )
 
-    %title TheBoard
+    %title ruote-on-rails
 
     %link( href='/images/favicon.png' type='image/png' rel='icon' )
     %link{ :href => '/stylesheets/reset.css', :type => 'text/css', :rel => 'stylesheet' }
@@ -24,7 +24,7 @@
 
       .header
         %a.home{ :href => '/' }
-          TheBoard
+          ruote-on-rails
         - if session[:username]
           %a.user{ :href => '/logout' } #{t('.logout')} #{session[:username]}
           .nav
