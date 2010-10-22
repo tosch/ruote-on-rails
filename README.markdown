@@ -6,12 +6,8 @@ Is an example Rails 3 app for demonstrating the usage of
 [ruote-kit](http://github.com/kennethkalmer/ruote-kit) and
 [quaderno](http://github.com/jmettraux/quaderno).
 
-It also contains an application template for Rails 3 which may be helpful to
-create new Rails apps using ruote[-kit].
-
-
-Installation of the example app
--------------------------------
+Installation
+------------
 
 *   clone (or do whatever you like to get the code) this repo:
         $ git clone git://github.com/tosch/ruote-on-rails.git  
@@ -29,29 +25,11 @@ Installation of the example app
 Generate a new Rails app using ruote[-kit]
 ------------------------------------------
 
-Note: You'll get a plain ruote[-kit] integration, no examples will be installed
-to your app. You won't get [quaderno](http://github.com/jmettraux/quaderno) this
-way, either.
-
-*   install Rails
-        $ gem install rails
-*   create a new Rails app by running
-        $ rails new foo -m http://github.com/tosch/ruote-on-rails/raw/rails3/template.rb
-*   cd into the new Rails dir
-        $ cd foo
-*   make sure all dependencies are met
-        $ bundle install
-
-
-Update an existing Rails app to use ruote[-kit]
------------------------------------------------
+[See ruote-kit's Readme on that](http://github.com/tosch/ruote-kit/blob/master/README.rdoc)
 
 Note: You'll get a plain ruote[-kit] integration, no examples will be installed
 to your app. You won't get [quaderno](http://github.com/jmettraux/quaderno) this
 way, either.
-
-*   in your Rails dir, apply the app template
-        $ rake rails:template LOCATION=http://github.com/tosch/ruote-on-rails/raw/rails3/template.rb
 
 
 Configuration
@@ -63,16 +41,10 @@ Just tailor config/initializers/ruote_kit.rb to your needs.
 Run
 ---
 
-In one terminal, start the Rails server itself:
     $ rails server
-In another terminal, start the RuoteKit worker process:
-    $ rake ruote:run_worker
 
 Browse to http://localhost:3000/_ruote and you'll see there are no running
 processes. You could change that using the "Launch process" link ;-)
-
-See below for why you have to start a separate worker process and how to change
-that.
 
 
 Using Ruote from within Rails
@@ -102,13 +74,15 @@ you may launch processes, but they will never appear in the processes list
 until you start a worker: The launch request will be put in the storage and lie
 there unprocessed.
 
-By default, RuoteOnRails does not include a worker in the engine when running
-the Rails server process. The reason is: You should make sure that the worker
-runs all the time or schedules (like timeouts) might not be triggered in time.
-When you use [Passenger](http://modrails.com) for deployment, your rails server
-process will be stopped after some time (in Passenger 3, you may configure that
-there should be at least one process running all the time, though). That way,
-schedules will hardly be triggered in time.
+By default, RuoteOnRails does include a worker in the engine when running the
+Rails server process. That way, you'll get started quickly. Please beware that
+you'll have to be careful when deploying to production. Ruote's worker thread
+should be always on, or schedules like timeouts won't be triggered in time (they
+won't be forgotten, the next time the worker starts they'll be triggered, but
+that may be too late). Especially [Passenger](http://modrails.com) stops Rails
+server processes after some time by default and would thus stop the ruote
+worker, too (in Passenger 3, you may configure that there should be at least one
+process running all the time, though).
 
 RuoteOnRails ships with a rake task that starts a worker and keeps running until
 you stop the task. You may launch it by calling
@@ -117,9 +91,10 @@ you stop the task. You may launch it by calling
 
 Stop the task by pressing Ctrl+C.
 
-If you're happy with a worker running inside your Rails server process, have a
-look at +config/initializers/ruote-kit.rb+. You'll find instructions there how
-to instanciate the ruote engine together with a worker.
+If you don't like to have a worker thread running inside your Rails server
+process, have a look at config/initializers/ruote-kit.rb. You'll find
+instructions there how to instanciate the ruote engine together without a
+worker.
 
 
 TheBoard example
