@@ -8,6 +8,7 @@
 
 # we will use yajl for json encoding/decoding
 # you may whish to use another one (json, json_pure) if yajl is not available
+#
 require 'yajl'
 Rufus::Json.backend = :yajl
 
@@ -16,6 +17,7 @@ require 'ruote/storage/fs_storage'
 RUOTE_STORAGE = Ruote::FsStorage.new("ruote_work_#{Rails.env}")
 
 RuoteKit.engine = Ruote::Engine.new(Ruote::Worker.new(RUOTE_STORAGE))
+
 # By default, there is a running worker when you start the Rails server. That is
 # convenient in development, but may be (or not) a problem in deployment.
 #
@@ -35,8 +37,11 @@ RuoteKit.engine = Ruote::Engine.new(Ruote::Worker.new(RUOTE_STORAGE))
 #
 # Stop the task by pressing Ctrl+C
 
-unless $RAKE_TASK # don't register participants in rake tasks
+unless $RAKE_TASK
+  # don't register participants when the run is triggered by a rake task
+
   RuoteKit.engine.register do
+
     # register your own participants using the participant method
     #
     # Example: participant 'alice', Ruote::StorageParticipant see
@@ -52,3 +57,4 @@ end
 RuoteKit.engine.context.logger.noisy = false
 
 require Rails.root.join('app/models/workitem.rb')
+

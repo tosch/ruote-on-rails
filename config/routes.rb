@@ -1,4 +1,6 @@
+
 RuoteOnRails::Application.routes.draw do
+
   resources :workitems
   resources :processes
   resources :forms
@@ -18,3 +20,4 @@ RuoteOnRails::Application.routes.draw do
   #
   root :to => 'workitems#index'
 end
+

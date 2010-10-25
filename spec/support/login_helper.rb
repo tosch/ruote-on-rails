@@ -1,7 +1,7 @@
 
 module LoginHelper
 
-  def login_as(username, password = nil)
+  def login_as(username, password=nil)
 
     visit '/'
     fill_in 'username', :with => username
