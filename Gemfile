@@ -39,6 +39,9 @@ end
 
 gem 'haml'
 
+gem 'sinatra', '1.0'
+gem 'sinatra-respond_to', '0.5.0'
+
 gem 'yajl-ruby', :require => 'yajl'
 gem 'ruote-kit', '2.1.11'
 
