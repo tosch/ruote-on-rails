@@ -10,7 +10,7 @@ module Rack
     end
 
     def call(env)
-      if env['PATH_INFO'].match(/\/_ruote/)
+      if env['PATH_INFO'].index('/_ruote')
         return forbidden unless env['rack.session']['username'] == 'admin'
       end
       @app.call(env)
