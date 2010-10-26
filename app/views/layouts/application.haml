@@ -9,12 +9,14 @@
 
     %link( href='/images/favicon.png' type='image/png' rel='icon' )
     %link{ :href => '/stylesheets/reset.css', :type => 'text/css', :rel => 'stylesheet' }
-    %link{ :href => '/stylesheets/theboard.css', :type => 'text/css', :rel => 'stylesheet' }
+    %link{ :href => '/stylesheets/application.css', :type => 'text/css', :rel => 'stylesheet' }
+    %link{ :href => '/stylesheets/ruote-fluo-editor.css', :type => 'text/css', :rel => 'stylesheet' }
     %link{ :href => '/stylesheets/quaderno.css', :type => 'text/css', :rel => 'stylesheet' }
     %link{ :href => '/stylesheets/jagaimo.css', :type => 'text/css', :rel => 'stylesheet' }
 
     %script{ :src => '/javascripts/jquery-1.4.3.min.js' }
     %script{ :src => '/_ruote/javascripts/ruote-fluo.js' }
+    %script{ :src => '/_ruote/javascripts/ruote-fluo-editor.js' }
     %script{ :src => '/javascripts/quaderno.js' }
     %script{ :src => '/javascripts/jagaimo.js' }
 
@@ -35,6 +37,8 @@
                 = link_to t('.processes'), processes_path
               %li
                 = link_to t('.forms'), forms_path
+              %li
+                = link_to t('.definitions'), definitions_path
               - if session[:username] == 'admin'
                 %li
                   = link_to t('.ruote'), '/_ruote'

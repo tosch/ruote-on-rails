@@ -1,0 +1,62 @@
+
+%h1
+  = t '.title'
+
+= form_for @definition do |f|
+
+  #flow
+    %canvas#fluo{ :width => 200, :height => 200 }
+  
+  #editor
+    %div.tab
+      %a{ :href => '', :onclick => 'return show("#textbox")'} #{t('.textbox')}
+    #fluo_editor
+
+  #textbox
+    %div.tab
+      %a{ :href => '', :onclick => 'return show("#editor")'} #{t('.editor')}
+    = f.text_area :definition
+
+  = link_to t('.cancel'), :action => :index
+  = f.submit t('.submit')
+
+:javascript
+
+  $('#textbox').hide();
+
+  //
+  // show
+
+  function show(id) {
+    $('#editor').hide();
+    $('#textbox').hide();
+    $(id).show();
+    return false;
+  }
+
+  //
+  // editor
+
+  FluoEditor.renderFlow('fluo_editor', #{@definition.tree_json});
+
+  $('#fluo_editor')[0].onChange = function (tree) {
+    Fluo.renderFlow('fluo', tree);
+    Fluo.crop('fluo');
+  }
+  $('#fluo_editor')[0].onOver = function (expid) {
+    Fluo.highlight('fluo', expid);
+  }
+
+  $('#definition_submit').bind('click', function() {
+    if ($('#editor')[0].style.display === 'none') return;
+    $('#definition_definition').val(FluoEditor.asJson('fluo_editor'));
+  });
+
+  //
+  // fluo
+
+  document.getElementById('fluo').noOuterBorder = true;
+  
+  Fluo.renderFlow('fluo', #{@definition.tree_json})
+  Fluo.crop('fluo');
+

@@ -4,6 +4,7 @@ RuoteOnRails::Application.routes.draw do
   resources :workitems
   resources :processes
   resources :forms
+  resources :definitions
 
   # ruote-kit
   #

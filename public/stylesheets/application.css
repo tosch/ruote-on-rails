@@ -110,6 +110,16 @@ table.form textarea {
   margin-right: 14px;
 }
 
+/* definitions/edit.haml */
+
+#textbox textarea {
+  width: 350px;
+}
+
+#fluo_editor {
+  width: 560px;
+}
+
 /* footer */
 
 .footer {

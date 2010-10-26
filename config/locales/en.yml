@@ -20,12 +20,18 @@ en:
     participant_name: participant
     task: task
 
+  definition:
+    id: id
+    name: name
+    revision: revision
+
   layouts:
     application:
       logout: logout
       workitems: workitems
       processes: processes
       forms: forms
+      definitions: definitions
       ruote: ruote
 
   sessions:
@@ -66,4 +72,18 @@ en:
       take: for myself
       save: save
       proceed: proceed
+  
+  definitions:
+    index:
+      title: process definitions
+      show: show
+      edit: edit
+      launch: launch
+      new: new process definition
+    edit:
+      title: process definition
+      editor: editor
+      textbox: textbox
+      cancel: cancel
+      submit: save
 

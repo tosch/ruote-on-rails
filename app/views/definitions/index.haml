@@ -1,0 +1,32 @@
+
+%h1
+  = t '.title'
+
+%table.list
+
+  %thead
+    %td
+      = t 'definition.id'
+    %td
+      = t 'definition.name'
+    %td
+      = t 'definition.revision'
+    %td
+
+  - @definitions.each do |definition|
+    %tr
+      %td
+        = definition.id
+      %td
+        = definition.name
+      %td
+        = definition.revision
+      %td
+        = link_to t('.show'), definition_path(definition)
+        = link_to t('.edit'), edit_definition_path(definition)
+        = link_to t('.launch'), definition_path(definition)
+
+.buttons
+  %a.button{ :href => new_definition_path }
+    = t('.new')
+
