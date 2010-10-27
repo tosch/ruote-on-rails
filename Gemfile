@@ -41,6 +41,8 @@ gem 'haml'
 
 gem 'sinatra', '1.0'
 gem 'sinatra-respond_to', '0.5.0'
+#gem 'sinatra', '1.1.0'
+#gem 'sinatra-respond_to', :git => 'http://github.com/cehoffman/sinatra-respond_to.git'
 
 gem 'yajl-ruby', :require => 'yajl'
 gem 'ruote-kit', '2.1.11'
