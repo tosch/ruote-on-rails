@@ -19,7 +19,7 @@ module Rack
       if pi.index('/_ruote/javascripts/') || pi.index('/_ruote/images/')
         return @app.call(env)
       end
-      if pi.index('/_ruote/')
+      if pi.index('/_ruote') || pi.index('/_ruote/')
         return forbidden
       end
       @app.call(env)
