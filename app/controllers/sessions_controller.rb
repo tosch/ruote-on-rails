@@ -11,9 +11,9 @@ class SessionsController < ApplicationController
 
   def create
 
-    if params[:username] == params[:password]
+    if u = User.authentify(params[:username], params[:password])
       session[:username] = params[:username]
-      session[:locale] = 'en'
+      session[:locale] = u.locale
       redirect_to '/'
     else
       flash[:error] = I18n.t('flash.errors.login_failed')

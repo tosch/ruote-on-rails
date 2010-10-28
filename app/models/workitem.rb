@@ -18,7 +18,7 @@ class Ruote::Workitem
 
   def self.for_user(username)
 
-    return RuoteKit.engine.storage_participant.all if username == 'admin'
+    return RuoteKit.engine.storage_participant.all if User.admin?(username)
 
     RuoteKit.engine.storage_participant.by_participant(username) +
     RuoteKit.engine.storage_participant.by_participant('anyone')

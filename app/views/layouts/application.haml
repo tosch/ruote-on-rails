@@ -39,7 +39,7 @@
                 = link_to t('.forms'), forms_path
               %li
                 = link_to t('.definitions'), definitions_path
-              - if session[:username] == 'admin'
+              - if User.admin?(session[:username])
                 %li
                   = link_to t('.ruote'), '/_ruote'
 

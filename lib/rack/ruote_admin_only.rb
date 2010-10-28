@@ -12,7 +12,7 @@ module Rack
 
     def call(env)
 
-      return @app.call(env) if user_admin?(env)
+      return @app.call(env) if User.admin?(env['rack.session']['username'])
 
       pi = env['PATH_INFO']
 
@@ -26,11 +26,6 @@ module Rack
     end
 
     protected
-
-    def user_admin?(env)
-
-      (env['rack.session']['username'] == 'admin')
-    end
 
     def forbidden
 

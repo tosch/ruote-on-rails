@@ -47,3 +47,6 @@ gem 'sinatra-respond_to', '0.5.0'
 gem 'yajl-ruby', :require => 'yajl'
 gem 'ruote-kit', '2.1.11'
 
+gem 'bcrypt-ruby'
+  # for app/models/user.rb
+
