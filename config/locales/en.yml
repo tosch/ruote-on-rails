@@ -5,6 +5,9 @@ en:
   flash:
     errors:
       login_failed: login failed
+    notice:
+      proceeded: "workitem %{fei} proceeded"
+      launched: "process %{wfid} launched"
 
   form:
     id: id

@@ -29,14 +29,19 @@ class WorkitemsController < ApplicationController
     submit = params[:workitem][:submit]
 
     if submit == 'proceed'
+
       RuoteKit.storage_participant.reply(workitem)
-      flash[:notice] = I18n.t('flash.proceeded', :wfid => workitem.fei.wfid)
+
+      flash[:notice] = I18n.t(
+        'flash.notice.proceeded', :wfid => workitem.fei.wfid)
     else
+
       if submit == 'release'
         workitem.participant_name = 'anyone'
       elsif submit == 'take'
         workitem.participant_name = session[:username]
       end
+
       RuoteKit.storage_participant.update(workitem)
     end
 
