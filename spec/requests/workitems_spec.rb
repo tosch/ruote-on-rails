@@ -28,7 +28,7 @@ describe '/workitems' do
             'fei' => {
               'engineid' => 'engine',
               'wfid' => "20101029#{i}-abcd",
-              'expid' => '0.0.0' },
+              'expid' => '0_0_0' },
             'participant_name' => pname,
             'fields' => { 'params' => { 'task' => "task for #{pname}" } }))
         end

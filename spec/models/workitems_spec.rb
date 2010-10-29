@@ -10,7 +10,7 @@ describe Ruote::Workitem do
       'fei' => {
         'engineid' => 'engine',
         'wfid' => "201010290-abcd",
-        'expid' => '0.0.0' },
+        'expid' => '0_0_0' },
       'participant_name' => 'joe',
       'fields' => { 'params' => { 'task' => 'task for joe' } })
   end
