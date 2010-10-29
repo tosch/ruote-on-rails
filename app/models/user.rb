@@ -29,10 +29,20 @@ class User
     @groups = groups
   end
 
+  def in_group?(group_name)
+
+    @groups.include?(group_name)
+  end
+
+  def admin?
+
+    in_group?('admin')
+  end
+
   def self.admin?(name)
 
     if u = find(name)
-      u.groups.include?('admin')
+      u.admin?
     else
       false
     end
@@ -75,6 +85,14 @@ class User
 
       a
     }
+  end
+
+  # Returns a list of all the known groups (all the groups mentioned in
+  # the passwd file).
+  #
+  def self.groups
+
+    all.collect { |user| user.groups }.flatten.uniq.sort
   end
 end
 

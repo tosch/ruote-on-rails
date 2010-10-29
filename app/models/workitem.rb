@@ -18,10 +18,20 @@ class Ruote::Workitem
 
   def self.for_user(username)
 
-    return RuoteKit.engine.storage_participant.all if User.admin?(username)
+    user = User.find(username)
 
-    RuoteKit.engine.storage_participant.by_participant(username) +
-    RuoteKit.engine.storage_participant.by_participant('anyone')
+    return RuoteKit.engine.storage_participant.all if user.admin?
+
+    # note : ruote 2.1.12 should make it possible to write
+    #
+    #   RuoteKit.engine.storage_participant.by_participant(
+    #     [ username, user.groups, 'anyone' ].flatten)
+    #
+    # directly.
+
+    [ username, user.groups, 'anyone' ].flatten.collect { |pname|
+      RuoteKit.engine.storage_participant.by_participant(pname)
+    }.flatten
   end
 
   #--
