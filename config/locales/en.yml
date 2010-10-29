@@ -78,8 +78,11 @@ en:
       title: process definitions
       show: show
       edit: edit
-      launch: launch
       new: new process definition
+    show:
+      title: process definition
+      back: back
+      launch: launch
     edit:
       title: process definition
       editor: editor
