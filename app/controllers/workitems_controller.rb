@@ -32,8 +32,7 @@ class WorkitemsController < ApplicationController
 
       RuoteKit.storage_participant.reply(workitem)
 
-      flash[:notice] = I18n.t(
-        'flash.notice.proceeded', :wfid => workitem.fei.wfid)
+      flash[:notice] = I18n.t('flash.notice.proceeded', :fei => workitem.fei.sid)
     else
 
       if submit == 'release'
