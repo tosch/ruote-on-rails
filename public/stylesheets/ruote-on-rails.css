@@ -1,139 +1,141 @@
+/* @override http://127.0.0.1:3000/stylesheets/ruote-on-rails.css */
 
-/* general */
+/* @group new sticky footer */
 
-body {
-  font: 14px/1.75em "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif;
-  background: #ffffff;
+/* http://www.cssstickyfooter.com/ */
+html, body {
+	height: 100%;
 }
-
 .container {
-  width: 90%;
-  margin: auto;
+	min-height: 100%;
+}
+.main_content {
+	overflow: auto;
+	padding-bottom: 64px;
+}
+.footer {
+	position: relative;
+	margin-top: -64px;
+	height: 64px;
+	clear: both;
+}
+/*Opera Fix*/
+body:before {
+	content: "";
+	height: 100%;
+	float: left;
+	width: 0;
+	margin-top: -32767px;
 }
 
+/* @end */
+/* main styles */
+body {
+	font: 14px/1.75em "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif;
+	background: #fff;
+}
 h1 {
-  font-size: 150%;
-  margin-bottom: 7px;
+	font-size: 150%;
+	margin-bottom: 7px;
 }
-
 .right {
-  text-align: right;
+	text-align: right;
 }
-
-/* header */
-
-.header {
-  width: 100%;
-  margin-bottom: 14px;
-  display: inline-block;
-  text-align: right;
-}
-
-.header a.home {
-  float: left;
-  margin-top: 7px;
-  font-size: 150%;
-}
-
-.header a.user {
-  display: inline-block;
-}
-
-.nav * {
-  display: inline-block;
-}
-
-/* buttons */
-
 .buttons {
-  white-space: nowrap;
-  padding: 12px 0 6px 0;
+	white-space: nowrap;
+	padding: 12px 0 6px 0;
 }
 .buttons a, input[type=submit] {
-  vertical-align: baseline;
-  margin: 0 2px;
-  padding: 3px 9px 4px 9px;
-  background: #aaaeb0;
-  color: #fcfcfc;
-  font-size: 14px;
-  line-height: 1.25em;
-  font-weight: bold;
-  border: none;
-  border-radius: 15px;
-  -webkit-border-radius: 15px;
-  -moz-border-radius: 15px;
-  text-decoration: none;
+	vertical-align: baseline;
+	margin: 0 2px;
+	padding: 3px 9px 4px 9px;
+	background: #aaaeb0;
+	color: #fcfcfc;
+	font-size: 14px;
+	line-height: 1.25em;
+	font-weight: bold;
+	border: none;
+	border-radius: 15px;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	text-decoration: none;
 }
 .buttons a:hover, input[type=submit]:hover {
-  cursor: pointer;
-  text-shadow: #555555 0 1px 0;
+	cursor: pointer;
+	text-shadow: #555555 0 1px 0;
 }
 .buttons a:active {
-  background: #9b9ea0;
+	background: #9b9ea0;
 }
 
+.header {
+	padding: 12px 24px;
+	margin-bottom: 14px;
+	display: inline-block;
+	text-align: right;
+}
+.header a.home {
+	float: left;
+	line-height: 1em;
+	margin-top: 7px;
+	font-size: 150%;
+}
+.header a.user {
+	display: inline-block;
+}
+.nav * {
+	display: inline-block;
+}
+.main_content {
+	padding: 12px 24px;
+}
 /* tables */
-
 table.list {
-  width: 100%;
-  border: 1px solid black;
+	width: 100%;
+	border: 1px solid black;
 }
 table.list > thead > td {
-  border-bottom: 1px solid black;
+	border-bottom: 1px solid black;
 }
 table.list td {
-  border: 1px dotted black;
-  padding: 3px;
+	border: 1px dotted black;
+	padding: 3px;
 }
-
 /* forms/show.haml */
-
 table.form {
-  width: 100%;
+	width: 100%;
 }
 table.form td {
-  padding: 3px;
-  vertical-align: top;
+	padding: 3px;
+	vertical-align: top;
 }
 table.form textarea {
-  width: 100%;
+	width: 100%;
 }
-
 /* workitems/show.haml */
-
 #flow {
-  float: right;
+	float: right;
 }
-
 #form {
-  float: left;
-  margin-right: 14px;
+	float: left;
+	margin-right: 14px;
 }
-
 /* definitions */
-
 #textbox textarea {
-  width: 350px;
+	width: 350px;
 }
-
 #fluo_editor {
-  width: 560px;
+	width: 560px;
 }
-
 pre#definition {
-  border: 1px solid black;
-  width: 60%;
-  font: 12px/1.3 Monaco, mono;
-  padding: 3px;
-  margin: 12px 0px;
+	border: 1px solid black;
+	width: 60%;
+	font: 12px/1.3 Monaco, mono;
+	padding: 3px;
+	margin: 12px 0px;
 }
-
 /* footer */
-
 .footer {
-  clear: both;
-  margin-top: 21px;
-  width: 100%;
-  text-align: right;
+	width: 100%;
+	text-align: center;
 }
-
