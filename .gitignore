@@ -7,3 +7,6 @@ db/*.sqlite3
 log/*.log
 tmp/**/*
 Gemfile.lock
+.DS_Store
+app/.DS_Store
+public/.DS_Store
