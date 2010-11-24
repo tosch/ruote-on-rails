@@ -27,21 +27,22 @@
       .header
         %a.home{ :href => '/' }
           ruote-on-rails
-        - if session[:username]
-          %a.user{ :href => '/logout' } #{t('.logout')} #{session[:username]}
-          .nav
-            %ul
+          
+      - if session[:username]
+        %a.button.user{ :href => '/logout' } #{t('.logout')} #{session[:username]}
+        .nav
+          %ul
+            %li
+              = link_to t('.workitems'), workitems_path
+            %li
+              = link_to t('.processes'), processes_path
+            %li
+              = link_to t('.forms'), forms_path
+            %li
+              = link_to t('.definitions'), definitions_path
+            - if User.admin?(session[:username])
               %li
-                = link_to t('.workitems'), workitems_path
-              %li
-                = link_to t('.processes'), processes_path
-              %li
-                = link_to t('.forms'), forms_path
-              %li
-                = link_to t('.definitions'), definitions_path
-              - if User.admin?(session[:username])
-                %li
-                  = link_to t('.ruote'), '/_ruote'
+                = link_to t('.ruote'), '/_ruote'
 
       = render :partial => 'shared/flash'
 

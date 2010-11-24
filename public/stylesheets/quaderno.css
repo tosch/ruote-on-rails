@@ -1,4 +1,7 @@
-/* @override http://localhost:3000/stylesheets/quaderno.css */
+/* @override 
+	http://localhost:3000/stylesheets/quaderno.css
+	http://127.0.0.1:3000/stylesheets/quaderno.css
+*/
 
 /* quad */
 
@@ -8,18 +11,16 @@
 	display: block;
 	line-height: 1.25em;
 	padding: 8px;
-	border: #ccd0d4 solid 1px;
+	border: #abb7c2 solid 1px;
 	border-left: none;
-	border-bottom: #ccd0d4 solid 1px;
-	border-top-right-radius: 8px;
-	border-top-left-radius: 8px;
-	-webkit-border-top-right-radius: 8px;
-	-webkit-border-top-left-radius: 8px;
-	-moz-border-radius-topright: 8px;
-	-moz-border-radius-topleft: 8px;
-	background: #E9ECED;
-	background: -webkit-gradient(linear, 0% 0%, 0% 33, from(#E9ECED), to(#fff));
-	background: -moz-linear-gradient(top, #E9ECED, #fff 33px);
+	border-bottom: #abb7c2 solid 1px;
+	-webkit-border-top-right-radius: 4px;
+	-webkit-border-top-left-radius: 4px;
+	-moz-border-radius-topright: 4px;
+	-moz-border-radius-topleft: 4px;
+	border-top-right-radius: 4px;
+	border-top-left-radius: 4px;
+	background: #fff;
 }
 .quad_root table td {
   padding: 0;
@@ -31,7 +32,8 @@
 	border-left:  #ccd0d4 solid 1px;
 }
 a.quad_tab {
-	color: #9b9ea0;
+	color: #8997a0;
+	background: #cde1ed;
 	text-align: center;
 	text-decoration: none;
 	font-size: 13px;
@@ -40,21 +42,21 @@ a.quad_tab {
 	font-weight: bold;
 }
 .quad_tab.quad_selected {
-	color: #86e34b;
-	text-shadow: #989999 0 1px 1px;
-	background: white;
+	color: #c52f24;
+	background: #fff;
 	border-bottom-color: transparent;
 }
 .quad_tab_body {
+	background: #fff;
 	padding: 18px 24px 12px 12px;
-	border: #ccd0d4 solid 1px;
+	border: #abb7c2 solid 1px;
 	border-top: none;
-	border-bottom-right-radius: 8px;
-	border-bottom-left-radius: 8px;
-	-webkit-border-bottom-right-radius: 8px;
-	-webkit-border-bottom-left-radius: 8px;
-	-moz-border-radius-bottomright: 8px;
-	-moz-border-radius-bottomleft: 8px;
+	-webkit-border-bottom-right-radius: 4px;
+	-webkit-border-bottom-left-radius: 4px;
+	-moz-border-radius-bottomright: 4px;
+	-moz-border-radius-bottomleft: 4px;
+	border-bottom-right-radius: 4px;
+	border-bottom-left-radius: 4px;
 }
 .quad_tab_element {
 	display: none;

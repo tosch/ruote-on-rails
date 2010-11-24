@@ -1,3 +1,4 @@
+/* @override http://127.0.0.1:3000/stylesheets/jagaimo.css */
 
 .jagaimo {
   color: #e7eef5;
@@ -6,9 +7,9 @@
   font: 10.5px/14px "Menlo regular", monaco, courier, mono;
   padding: 12px;
   margin: 1px;
-  -webkit-border-radius: 8px;
-  -moz-border-radius: 8px;
-  border-radius: 8px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
   /*overflow: auto;*/
 }
 
