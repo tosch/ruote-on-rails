@@ -32,17 +32,16 @@
 	border-left:  #ccd0d4 solid 1px;
 }
 a.quad_tab {
-	color: #8997a0;
-	background: #cde1ed;
+	color: #85939b;
+	background: #dfe4ec;
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#dfe4ec), to(#f3f5f8));
+	background: -moz-linear-gradient(top, #dfe4ec, #f3f5f8);
 	text-align: center;
 	text-decoration: none;
-	font-size: 13px;
 	text-shadow: #fff 0 1px 0;
-	text-transform: uppercase;
 	font-weight: bold;
 }
 .quad_tab.quad_selected {
-	color: #c52f24;
 	background: #fff;
 	border-bottom-color: transparent;
 }
