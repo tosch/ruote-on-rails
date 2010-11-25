@@ -2,10 +2,9 @@
 	http://localhost:3000/stylesheets/quaderno.css
 	http://127.0.0.1:3000/stylesheets/quaderno.css
 */
-
 /* quad */
-
 .quad_root {
+	
 }
 .quad_tab {
 	display: block;
@@ -13,7 +12,6 @@
 	padding: 8px;
 	border: #abb7c2 solid 1px;
 	border-left: none;
-	border-bottom: #abb7c2 solid 1px;
 	-webkit-border-top-right-radius: 4px;
 	-webkit-border-top-left-radius: 4px;
 	-moz-border-radius-topright: 4px;
@@ -23,13 +21,13 @@
 	background: #fff;
 }
 .quad_root table td {
-  padding: 0;
+	padding: 0;
 }
 .quad_root tr:first-child td {
 	vertical-align: bottom;
 }
 .quad_root td:first-child .quad_tab {
-	border-left:  #ccd0d4 solid 1px;
+	border-left: #abb7c2 solid 1px;
 }
 a.quad_tab {
 	color: #85939b;
@@ -75,17 +73,16 @@ span.quad_type {
 div.quad_key, span.quad_key {
 	color: #8b8f91;
 	display: inline-block;
-	/*width: 80px;*/
 	width: 140px;
 	margin-right: 4px;
 	text-align: right;
 }
 div.quad_key.quad_text {
-  width: auto;
-  margin-bottom: 4px;
+	width: auto;
+	margin-bottom: 4px;
 }
 .quad_label {
-  color: #8b8f91;
+	color: #8b8f91;
 }
 .quad_link_target {
 	width: 70px;
@@ -94,39 +91,30 @@ div.quad_key.quad_text {
 	cursor: pointer;
 	margin-right: 4px;
 }
-
 /* text_input */
-
 input.quad_value {
-  width: 350px;
+	width: 350px;
 }
-
 /* checkbox */
-
 input.quad_checkbox {
-  /*margin-left: 69px;*/
-  margin-left: 129px;
-  margin-right: 5px;
+	margin-left: 129px;
+	margin-right: 5px;
 }
 span.quad_checkbox_key {
-  color: #8b8f91;
-  display: inline-block;
-  text-align: left;
-  margin-right: 4px;
+	color: #8b8f91;
+	display: inline-block;
+	text-align: left;
+	margin-right: 4px;
 }
-
 /* textarea */
-
 textarea.quad_value {
-  display: inline-block;
-  width: auto;
-  height: 77px;
-  font: inherit;
-  font-size: 90%;
+	display: inline-block;
+	width: auto;
+	height: 77px;
+	font: inherit;
+	font-size: 90%;
 }
-
 /* buttons */
-
 input, select {
 	margin-right: 4px;
 }
@@ -153,7 +141,6 @@ a.quadButton, .quad_rep {
 	-moz-border-radius: 12px;
 }
 .quad_box {
-	/*display: inline-block;*/
 	display: block;
 	padding: 8px 12px;
 	background: #fff;
@@ -166,16 +153,16 @@ a.quadButton, .quad_rep {
 	border-style: solid;
 }
 .quad_box_head {
-  padding-bottom: 4px;
-  margin-bottom: 4px;
-  border-bottom: 1px dashed #ccd0d4;
+	padding-bottom: 4px;
+	margin-bottom: 4px;
+	border-bottom: 1px dashed #ccd0d4;
 }
 a.quad_button {
-  display: inline-block;
-  margin-right: 1px;
-  width: 12px;
-  height: 12px;
-  background: transparent url(../images/quaderno/quaderno_buttons.png) no-repeat;
+	display: inline-block;
+	margin-right: 1px;
+	width: 12px;
+	height: 12px;
+	background: transparent url(../images/quaderno/quaderno_buttons.png) no-repeat;
 }
 a.quad_plus_button {
 	background-position: 0 0;
@@ -237,23 +224,15 @@ a.quad_left_button:hover {
 a.quad_right_button:hover {
 	background-position: -20px -160px;
 }
-
 a.array_remove_button {
-  /*
-  position: relative;
-  display: block;
-  top: -21px;
-  left: +4px;
-  */
-}
+	
 
+}
 /* dates */
-
 .quad_date_separator {
-  color: #8b8f91;
-  display: inline-block;
-  width: 1em;
-  margin-right: 3px;
-  text-align: right;
+	color: #8b8f91;
+	display: inline-block;
+	width: 1em;
+	margin-right: 3px;
+	text-align: right;
 }
-
