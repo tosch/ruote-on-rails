@@ -110,7 +110,7 @@ a.home:hover {
 	text-decoration: none;
 }
 a.user {
-	position: fixed;
+	position: absolute;
 	top: 26px;
 	right: 24px;
 	color: #e6c8cc;

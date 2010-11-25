@@ -14,6 +14,10 @@
     %link{ :href => '/stylesheets/quaderno.css', :type => 'text/css', :rel => 'stylesheet' }
     %link{ :href => '/stylesheets/jagaimo.css', :type => 'text/css', :rel => 'stylesheet' }
 
+    /[if !IE7]
+      :css
+        .container { display: table; height: 100%; }
+
     %script{ :src => '/javascripts/jquery-1.4.3.min.js' }
     %script{ :src => '/_ruote/javascripts/ruote-fluo.js' }
     %script{ :src => '/_ruote/javascripts/ruote-fluo-editor.js' }
