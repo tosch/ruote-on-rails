@@ -30,7 +30,7 @@
 
       .header
         %a.home{ :href => '/' }
-          ruote-on-rails
+          %img{ :src => '/images/ruote.png', :alt => 'ruote-on-rails' }
           
       - if session[:username]
         %a.button.user{ :href => '/logout' } #{t('.logout')} #{session[:username]}

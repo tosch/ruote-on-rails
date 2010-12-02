@@ -97,18 +97,17 @@ input[type=submit] {
 	background: #c52f24;
 }
 a.home {
-	margin-left: 12px;
-	padding: 12px 18px;
+	margin-top: 7px;
+	margin-left: 4px;
+	padding: 8px 16px;
 	color: #e6c8cc;
-	text-shadow:  0 -1px 1px rgba(0,0,0,0.33);
-	line-height: 1.66em;
-	font-size: 36;
-	font-weight: bold;
-	font-style: italic;
+	display: inline-block;
 }
 a.home:hover {
 	color: #fff;
 	text-decoration: none;
+}
+a.home img {
 }
 a.user {
 	position: absolute;
@@ -180,6 +179,7 @@ div.nav {
 }
 .main_content {
 	padding: 36px 24px;
+	margin-bottom: 110px;
 	border-top: 1px solid #fffeff;
 	background: -webkit-gradient(linear, 0% 0%, 0% 64, from(#d9d9d9), to(#f1f1f1));
 	background: -moz-linear-gradient(top, #d9d9d9, #f1f1f1 64px);
