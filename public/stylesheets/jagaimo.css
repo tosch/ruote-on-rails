@@ -1,4 +1,3 @@
-/* @override http://127.0.0.1:3000/stylesheets/jagaimo.css */
 .jagaimo {
 	color: #e7eef5;
 	/*background: rgba(0,0,0,.85);*/
@@ -6,9 +5,9 @@
 	font: 10.5px/14px "Menlo regular", monaco, courier, mono;
 	padding: 12px;
 	margin: 1px;
-	-webkit-border-radius: 4px;
-	-moz-border-radius: 4px;
-	border-radius: 4px;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
 	/*overflow: auto;*/
 }
 .jagaimo_atom {

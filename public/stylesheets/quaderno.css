@@ -1,59 +1,52 @@
-/* @override 
-	http://localhost:3000/stylesheets/quaderno.css
-	http://127.0.0.1:3000/stylesheets/quaderno.css
-*/
+/* @override http://localhost:3000/stylesheets/quaderno.css */
 /* quad */
-.quad_root {
-	
+table.quad_tab_group {
+	border-collapse: separate;
+	border-spacing: 0;
 }
-.quad_tab {
-	display: block;
-	line-height: 1.25em;
-	padding: 8px;
-	border: #abb7c2 solid 1px;
-	border-left: none;
-	-webkit-border-top-right-radius: 4px;
-	-webkit-border-top-left-radius: 4px;
-	-moz-border-radius-topright: 4px;
-	-moz-border-radius-topleft: 4px;
-	border-top-right-radius: 4px;
-	border-top-left-radius: 4px;
-	background: #fff;
-}
-.quad_root table td {
+.quad_tab_group td {
+	vertical-align: middle;
 	padding: 0;
 }
-.quad_root tr:first-child td {
-	vertical-align: bottom;
+.quad_tab {
+	border: 1px solid #919191;
+	border-bottom-color: black;
+	-webkit-border-top-right-radius: 6px;
+	-webkit-border-top-left-radius: 6px;
+	-moz-border-radius-topright: 6px;
+	-moz-border-radius-topleft: 6px;
+	border-top-right-radius: 6px;
+	border-top-left-radius: 6px;
+	background: #f6f6f6;
 }
-.quad_root td:first-child .quad_tab {
-	border-left: #abb7c2 solid 1px;
-}
-a.quad_tab {
-	color: #85939b;
-	background: #dfe4ec;
-	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#dfe4ec), to(#f3f5f8));
-	background: -moz-linear-gradient(top, #dfe4ec, #f3f5f8);
+.quad_tab a {
+	display: block;
+	padding: 8px;
+	color: #919191;
+	line-height: 1.25em;
 	text-align: center;
 	text-decoration: none;
-	text-shadow: #fff 0 1px 0;
+	font-size: 13px;
 	font-weight: bold;
 }
 .quad_tab.quad_selected {
-	background: #fff;
+	background: white;
+	border-color: black;
 	border-bottom-color: transparent;
 }
+.quad_tab.quad_selected a {
+	color: black;
+}
 .quad_tab_body {
-	background: #fff;
-	padding: 18px 24px 12px 12px;
-	border: #abb7c2 solid 1px;
+	padding: 12px;
+	border: 1px solid black;
 	border-top: none;
-	-webkit-border-bottom-right-radius: 4px;
-	-webkit-border-bottom-left-radius: 4px;
-	-moz-border-radius-bottomright: 4px;
-	-moz-border-radius-bottomleft: 4px;
-	border-bottom-right-radius: 4px;
-	border-bottom-left-radius: 4px;
+	-webkit-border-bottom-right-radius: 6px;
+	-webkit-border-bottom-left-radius: 6px;
+	-moz-border-radius-bottomright: 6px;
+	-moz-border-radius-bottomleft: 6px;
+	border-bottom-right-radius: 6px;
+	border-bottom-left-radius: 6px;
 }
 .quad_tab_element {
 	display: none;
@@ -64,14 +57,12 @@ a.quad_tab {
 .quad_new_element {
 	margin: 16px 4px 12px 86px;
 }
-/*
-span.quad_type {
+/*span.quad_type {
 	width: 84px;
 	display: inline-block;
-}
-*/
+}*/
 div.quad_key, span.quad_key {
-	color: #8b8f91;
+	color: #919191;
 	display: inline-block;
 	width: 140px;
 	margin-right: 4px;
@@ -82,7 +73,14 @@ div.quad_key.quad_text {
 	margin-bottom: 4px;
 }
 .quad_label {
-	color: #8b8f91;
+	color: #919191;
+}
+.quad_date_separator {
+	color: #919191;
+	display: inline-block;
+	width: 1.25em;
+	margin-right: 2px;
+	text-align: right;
 }
 .quad_link_target {
 	width: 70px;
@@ -93,7 +91,7 @@ div.quad_key.quad_text {
 }
 /* text_input */
 input.quad_value {
-	width: 350px;
+
 }
 /* checkbox */
 input.quad_checkbox {
@@ -110,9 +108,8 @@ span.quad_checkbox_key {
 textarea.quad_value {
 	display: inline-block;
 	width: auto;
-	height: 77px;
-	font: inherit;
-	font-size: 90%;
+	height: 75px;
+	font-size: .9em;
 }
 /* buttons */
 input, select {
@@ -126,9 +123,9 @@ a.quadButton, .quad_rep {
 	font-size: 14px;
 	line-height: 1.25em;
 	font-weight: bold;
-	border-radius: 6px;
 	-webkit-border-radius: 6px;
 	-moz-border-radius: 6px;
+	border-radius: 6px;
 	text-decoration: none;
 }
 .quad_rep {
@@ -144,18 +141,15 @@ a.quadButton, .quad_rep {
 	display: block;
 	padding: 8px 12px;
 	background: #fff;
-	border: 1px dashed #ccd0d4;
-	border-radius: 4px;
-	-webkit-border-radius: 4px;
-	-moz-border-radius: 4px;
-}
-.quad_box:hover {
-	border-style: solid;
+	border: 1px solid #dbdbdb;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
 }
 .quad_box_head {
 	padding-bottom: 4px;
 	margin-bottom: 4px;
-	border-bottom: 1px dashed #ccd0d4;
+	border-bottom: 1px solid #dbdbdb;
 }
 a.quad_button {
 	display: inline-block;
@@ -225,14 +219,5 @@ a.quad_right_button:hover {
 	background-position: -20px -160px;
 }
 a.array_remove_button {
-	
 
-}
-/* dates */
-.quad_date_separator {
-	color: #8b8f91;
-	display: inline-block;
-	width: 1em;
-	margin-right: 3px;
-	text-align: right;
 }
