@@ -7,8 +7,9 @@
 
 %pre#definition #{@definition.definition}
 
-= link_to t('.back'), :action => :index
-= button_to t('.launch'), processes_path(:definition => @definition.id)
+.buttons
+  = link_to t('.back'), :action => :index
+  = button_to t('.launch'), processes_path(:definition => @definition.id)
 
 
 :javascript

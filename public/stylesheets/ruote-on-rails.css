@@ -34,14 +34,14 @@ body {
 	background: #f1f1f1;
 }
 a {
-	color: #980905;
+	color: #3d90e3;
 	text-decoration: none;
 }
 a:hover {
 	text-decoration: underline;
 }
 a:visited {
-	color: #7b0c05;
+	color: #2f74bc;
 }
 h1 {
 	color: #85939b;
@@ -59,6 +59,9 @@ textarea:focus {
 .buttons {
 	white-space: nowrap;
 	padding: 12px 0 6px 0;
+}
+.buttons form {
+	display: inline-block;
 }
 .buttons a, a.button, input[type=submit] {
 	vertical-align: baseline;
@@ -87,6 +90,9 @@ textarea:focus {
 }
 input[type=submit] {
 	background: #5d94dd;
+	-webkit-box-shadow: inset 0px 0px 6px rgba(0,0,0,0.6), 1px 1px 0 rgba(255,255,255,0.4), -1px -1px 0 rgba(0,0,0,0.4);
+	-moz-box-shadow:    inset 0px 0px 6px rgba(0,0,0,0.6), 1px 1px 0 rgba(255,255,255,0.4), -1px -1px 0 rgba(0,0,0,0.4);
+	box-shadow:         inset 0px 0px 6px rgba(0,0,0,0.6), 1px 1px 0 rgba(255,255,255,0.4), -1px -1px 0 rgba(0,0,0,0.4);
 }
 .header {
 	height: 64px;
@@ -94,13 +100,14 @@ input[type=submit] {
 	-webkit-box-shadow: inset 0px 0px 72px rgba(0,0,0,0.6);
 	-moz-box-shadow:    inset 0px 0px 72px rgba(0,0,0,0.6);
 	box-shadow:         inset 0px 0px 72px rgba(0,0,0,0.6);
-	background: #c52f24;
+	background: #4776a8;
 }
 a.home {
 	margin-top: 7px;
 	margin-left: 4px;
 	padding: 8px 16px;
-	color: #e6c8cc;
+	color: #fff;
+	color: rgba(255,255,255,.75);
 	display: inline-block;
 }
 a.home:hover {
@@ -113,7 +120,8 @@ a.user {
 	position: absolute;
 	top: 26px;
 	right: 24px;
-	color: #e6c8cc;
+	color: #fff;
+	color: rgba(255,255,255,.75);
 	font-size: 12px;
 	background: #980905;
 	background: rgba(0,0,0,0.25);
@@ -165,7 +173,7 @@ div.nav {
 	font-weight: bold;
 }
 .nav a:hover {
-	color: #980905;
+	color: #3d90e3;
 	text-decoration: none;
 }
 .session {
@@ -233,7 +241,8 @@ table.form textarea {
 /* misc. */
 input#form_task_regex,
 textarea#form_template,
-textarea#form_sample_data {
+textarea#form_sample_data,
+#fluo_editor, textarea#definition_definition {
 	background: #fff;
 	border: 1px solid #abb7c2;
 	-webkit-border-radius: 4px;
@@ -261,7 +270,7 @@ textarea#form_sample_data:focus {
 	-moz-border-radius-topleft: 4px;
 	border-top-right-radius: 4px;
 	border-top-left-radius: 4px;
-	background: #f1f1f1;
+	background: #dfe4ec;
 }
 .quad_tab.quad_selected {
 	border-color: #abb7c2;
@@ -302,11 +311,18 @@ div.quad_key, span.quad_key {
 	float: left;
 	margin-right: 14px;
 }
-#textbox textarea {
-	width: 350px;
-}
-#fluo_editor {
+#textbox textarea, #fluo_editor {
 	width: 560px;
+	margin-top: 0;
+}
+#editor .tab, #textbox .tab {
+	font-size: 90%;
+	width: 548px;
+	padding: 1px 6px;
+	text-align: right;
+	margin-bottom: -2em;
+	z-index: 1;
+	position: relative;
 }
 pre#definition {
 	background: #fff;

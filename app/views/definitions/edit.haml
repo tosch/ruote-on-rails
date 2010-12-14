@@ -17,8 +17,9 @@
       %a{ :href => '', :onclick => 'return show("#editor")'} #{t('.editor')}
     = f.text_area :definition
 
-  = link_to t('.cancel'), :action => :index
-  = f.submit t('.submit')
+  .buttons
+    = link_to t('.cancel'), :action => :index
+    = f.submit t('.submit')
 
 :javascript
 
