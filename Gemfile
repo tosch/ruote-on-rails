@@ -3,7 +3,7 @@ source 'http://rubygems.org'
 
 # Rails
 #
-gem 'rails', '3.0.1'
+gem 'rails', '3.0.4'
 #gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3-ruby', :require => 'sqlite3'
