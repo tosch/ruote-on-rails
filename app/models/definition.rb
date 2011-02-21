@@ -13,7 +13,7 @@ class Definition < ActiveRecord::Base
 
   def tree
 
-    Ruote::Parser.parse(definition)
+    Ruote::Reader.read(definition)
   end
 
   def tree_json
@@ -25,7 +25,7 @@ class Definition < ActiveRecord::Base
   #
   def rubyize!
 
-    self.definition = Ruote::Parser.to_ruby(tree).strip
+    self.definition = Ruote::Reader.to_ruby(tree).strip
   end
 end
 
